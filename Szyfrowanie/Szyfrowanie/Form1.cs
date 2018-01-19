@@ -111,7 +111,7 @@ namespace Szyfrowanie
                 form2.Show();
                 form2.Closed += (sender1, args) =>
                 {
-                    this.substitutionCypherKey.AddRange(form2.cipherList);
+                    this.substitutionCypherKey.AddRange(form2.cypherList);
                     SubstitutionCypher sCypher = new SubstitutionCypher(loadedText.text, substitutionCypherKey);
                     loadedText.encryptedText = sCypher.SubstitutionEncypher();
                     encryptedTextBox.Text = loadedText.encryptedText;
@@ -139,21 +139,6 @@ namespace Szyfrowanie
                 filename = saveFileDialog1.FileName;
                 loadedText.SaveWithKey(filename, keyTextBox.Text);
             }
-        }
-
-        private void newPolygraphicCypherButton_Click(object sender, EventArgs e)
-        {
-            mixedCypherKey.Clear();
-            MixedCypherForm form3 = new MixedCypherForm();
-            form3.Show();
-            form3.Closed += (sender1, args) =>
-            {
-                this.mixedCypherKey.AddRange(form3.mixedCypherList);
-                PolygraphicCypher mCypher = new PolygraphicCypher(loadedText.text, mixedCypherKey);
-                loadedText.encryptedText = mCypher.SubstitutionEncypher();
-                encryptedTextBox.Text = loadedText.encryptedText;
-                keyTextBox.Text = ShowStringListContent(mixedCypherKey);
-            };
         }
 
     }

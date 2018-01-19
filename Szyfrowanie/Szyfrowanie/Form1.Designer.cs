@@ -36,7 +36,6 @@
             this.chooseFileButton = new System.Windows.Forms.Button();
             this.saveWithoutCypherButton = new System.Windows.Forms.Button();
             this.saveWithCypherButton = new System.Windows.Forms.Button();
-            this.newMixedCypherButton = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
@@ -50,7 +49,6 @@
             this.quitButton = new System.Windows.Forms.Button();
             this.fileNameBox = new System.Windows.Forms.TextBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
@@ -79,8 +77,8 @@
             this.caesaeButton.Size = new System.Drawing.Size(148, 52);
             this.caesaeButton.TabIndex = 7;
             this.caesaeButton.Text = "Szyfr Cezara";
-            this.toolTip1.SetToolTip(this.caesaeButton, "Zamień każdą literę w tekście na literę znajdującą się X pozycji dalej.\r\nX można " +
-        "ustawić w polu po prawej.\r\n");
+            this.toolTip1.SetToolTip(this.caesaeButton, "Zamień każdą literę w tekście na literę znajdującą się X pozycji dalej, lub wcześ" +
+        "niej.\r\nX można ustawić w polu po prawej.\r\n\r\n");
             this.caesaeButton.UseVisualStyleBackColor = true;
             this.caesaeButton.Click += new System.EventHandler(this.caesarCypherButton);
             // 
@@ -90,7 +88,7 @@
             this.newSubstitutionCypherButton.Name = "newSubstitutionCypherButton";
             this.newSubstitutionCypherButton.Size = new System.Drawing.Size(148, 52);
             this.newSubstitutionCypherButton.TabIndex = 10;
-            this.newSubstitutionCypherButton.Text = "prosty szyfr podstawieniowy ";
+            this.newSubstitutionCypherButton.Text = "Prosty szyfr pdostawieniowy\r\n";
             this.toolTip1.SetToolTip(this.newSubstitutionCypherButton, "Zdefiniuj własny prosty szyfr podstawieniowy, lub uzupełnij go losowymi znakami\r\n" +
         "");
             this.newSubstitutionCypherButton.UseVisualStyleBackColor = true;
@@ -128,17 +126,6 @@
             this.toolTip1.SetToolTip(this.saveWithCypherButton, "Zapisz zaszyfrowany dokument, razem z szyfrem, w którym go zakodowano");
             this.saveWithCypherButton.UseVisualStyleBackColor = true;
             this.saveWithCypherButton.Click += new System.EventHandler(this.saveWithCypherButton_Click);
-            // 
-            // newMixedCypherButton
-            // 
-            this.newMixedCypherButton.Location = new System.Drawing.Point(12, 214);
-            this.newMixedCypherButton.Name = "newMixedCypherButton";
-            this.newMixedCypherButton.Size = new System.Drawing.Size(148, 52);
-            this.newMixedCypherButton.TabIndex = 13;
-            this.newMixedCypherButton.Text = "poligramowy szyfr podstawieniowy";
-            this.toolTip1.SetToolTip(this.newMixedCypherButton, "Zdefiniuj własny szyfr poligramowy, lub uzupełnij go losowymi ciągami znaków\r\n");
-            this.newMixedCypherButton.UseVisualStyleBackColor = true;
-            this.newMixedCypherButton.Click += new System.EventHandler(this.newPolygraphicCypherButton_Click);
             // 
             // saveFileDialog1
             // 
@@ -254,7 +241,7 @@
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(225, 114);
+            this.numericUpDown1.Location = new System.Drawing.Point(229, 114);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             25,
             0,
@@ -296,9 +283,7 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.textBox3);
             this.splitContainer1.Panel1.Controls.Add(this.textBox2);
-            this.splitContainer1.Panel1.Controls.Add(this.newMixedCypherButton);
             this.splitContainer1.Panel1.Controls.Add(this.saveWithCypherButton);
             this.splitContainer1.Panel1.Controls.Add(this.saveWithoutCypherButton);
             this.splitContainer1.Panel1.Controls.Add(this.chooseFileButton);
@@ -314,16 +299,6 @@
             this.splitContainer1.Size = new System.Drawing.Size(1115, 436);
             this.splitContainer1.SplitterDistance = 396;
             this.splitContainer1.TabIndex = 11;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(166, 214);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(204, 52);
-            this.textBox3.TabIndex = 15;
-            this.textBox3.Text = "Zastąp każdą literę tekstu na wybraną literę, lub ciąg liter";
             // 
             // textBox2
             // 
@@ -388,8 +363,6 @@
         private System.Windows.Forms.Button saveWithoutCypherButton;
         private System.Windows.Forms.Button saveWithCypherButton;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.Button newMixedCypherButton;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
     }
 }

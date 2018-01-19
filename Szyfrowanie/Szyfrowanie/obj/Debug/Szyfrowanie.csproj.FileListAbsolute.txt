@@ -26,7 +26,6 @@ C:\Users\User\Desktop\IT\C-_project\Szyfrowanie\Szyfrowanie\bin\Debug\Szyfrowani
 C:\Users\User\Desktop\IT\C-_project\Szyfrowanie\Szyfrowanie\obj\Debug\Szyfrowanie.csprojResolveAssemblyReference.cache
 C:\Users\User\Desktop\IT\C-_project\Szyfrowanie\Szyfrowanie\obj\Debug\Szyfrowanie.Form1.resources
 C:\Users\User\Desktop\IT\C-_project\Szyfrowanie\Szyfrowanie\obj\Debug\Szyfrowanie.substitutionCipherForm.resources
-C:\Users\User\Desktop\IT\C-_project\Szyfrowanie\Szyfrowanie\obj\Debug\Szyfrowanie.MixedCypherForm.resources
 C:\Users\User\Desktop\IT\C-_project\Szyfrowanie\Szyfrowanie\obj\Debug\Szyfrowanie.Properties.Resources.resources
 C:\Users\User\Desktop\IT\C-_project\Szyfrowanie\Szyfrowanie\obj\Debug\Szyfrowanie.csproj.GenerateResource.Cache
 C:\Users\User\Desktop\IT\C-_project\Szyfrowanie\Szyfrowanie\obj\Debug\Szyfrowanie.csproj.CoreCompileInputs.cache
