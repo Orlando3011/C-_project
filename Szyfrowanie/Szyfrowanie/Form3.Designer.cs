@@ -1181,6 +1181,8 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.quitButton);
             this.Controls.Add(this.randomLettersButton);
+            this.MaximumSize = new System.Drawing.Size(988, 550);
+            this.MinimumSize = new System.Drawing.Size(988, 550);
             this.Name = "MixedCypherForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ustaw Szyfr";

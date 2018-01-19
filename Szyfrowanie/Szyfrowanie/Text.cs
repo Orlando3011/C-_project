@@ -15,7 +15,7 @@ namespace Szyfrowanie
         public String fileName;
         public String filePath;
 
-        public String showFileName()
+        public String setFileName()
         {
             int lastSplash = this.filePath.LastIndexOf("\\");
             this.fileName = this.filePath.Substring(lastSplash + 1, this.filePath.Length - lastSplash - 1);

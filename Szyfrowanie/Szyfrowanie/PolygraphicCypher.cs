@@ -7,11 +7,11 @@ using System.Windows.Forms;
 
 namespace Szyfrowanie
 {
-    class MixedCypher: Cypher
+    class PolygraphicCypher: Cypher
     {
         List<String> cypherKey;
 
-        public MixedCypher(string initialText, List<String> cypherKey)
+        public PolygraphicCypher(string initialText, List<String> cypherKey)
         {
             this.initialText = initialText;
             this.cypherKey = cypherKey;

@@ -55,10 +55,15 @@ namespace Szyfrowanie
             try
             {
                 string output = "";
+                output = output + "----------------\r\nMałe litery:\r\n----------------\r\n";
+
                 for (char i = 'a'; i <= 'z'; i++)
                 {
                     output = output + i + " -> " + list[i - 'a'] + "\r\n";
                 }
+
+                output = output + "\r\n----------------\r\nDuże litery:\r\n----------------\r\n\r\n";
+
                 for (char i = 'A'; i <= 'Z'; i++)
                 {
                     output = output + i + " -> " + list[i - 'A' + 26] + "\r\n";
@@ -83,7 +88,8 @@ namespace Szyfrowanie
             {
                 loadedText.filePath = openFileDialog1.FileName;
                 loadedText.text = loadedText.readTextFile();
-                fileNameBox.Text = loadedText.showFileName();
+                loadedText.fileName = loadedText.setFileName();
+                fileNameBox.Text = loadedText.fileName;
                 originalTextBox.Text = loadedText.text;
             }
         }
@@ -135,7 +141,7 @@ namespace Szyfrowanie
             }
         }
 
-        private void newMixedCypherButton_Click(object sender, EventArgs e)
+        private void newPolygraphicCypherButton_Click(object sender, EventArgs e)
         {
             mixedCypherKey.Clear();
             MixedCypherForm form3 = new MixedCypherForm();
@@ -143,7 +149,7 @@ namespace Szyfrowanie
             form3.Closed += (sender1, args) =>
             {
                 this.mixedCypherKey.AddRange(form3.mixedCypherList);
-                MixedCypher mCypher = new MixedCypher(loadedText.text, mixedCypherKey);
+                PolygraphicCypher mCypher = new PolygraphicCypher(loadedText.text, mixedCypherKey);
                 loadedText.encryptedText = mCypher.SubstitutionEncypher();
                 encryptedTextBox.Text = loadedText.encryptedText;
                 keyTextBox.Text = ShowStringListContent(mixedCypherKey);

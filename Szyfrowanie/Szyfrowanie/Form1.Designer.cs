@@ -90,8 +90,9 @@
             this.newSubstitutionCypherButton.Name = "newSubstitutionCypherButton";
             this.newSubstitutionCypherButton.Size = new System.Drawing.Size(148, 52);
             this.newSubstitutionCypherButton.TabIndex = 10;
-            this.newSubstitutionCypherButton.Text = "Nowy szyfr podstawieniowy...";
-            this.toolTip1.SetToolTip(this.newSubstitutionCypherButton, "Zdefiniuj własny szyfr podstawieniowy, lub uzupełnij go losowymi znakami\r\n");
+            this.newSubstitutionCypherButton.Text = "prosty szyfr podstawieniowy ";
+            this.toolTip1.SetToolTip(this.newSubstitutionCypherButton, "Zdefiniuj własny prosty szyfr podstawieniowy, lub uzupełnij go losowymi znakami\r\n" +
+        "");
             this.newSubstitutionCypherButton.UseVisualStyleBackColor = true;
             this.newSubstitutionCypherButton.Click += new System.EventHandler(this.newSubstitutionCypherButton_Click);
             // 
@@ -134,10 +135,10 @@
             this.newMixedCypherButton.Name = "newMixedCypherButton";
             this.newMixedCypherButton.Size = new System.Drawing.Size(148, 52);
             this.newMixedCypherButton.TabIndex = 13;
-            this.newMixedCypherButton.Text = "Nowy szyfr mieszany...";
-            this.toolTip1.SetToolTip(this.newMixedCypherButton, "Zdefiniuj własny szyfr mieszany, lub uzupełnij go losowymi ciągami znaków\r\n");
+            this.newMixedCypherButton.Text = "poligramowy szyfr podstawieniowy";
+            this.toolTip1.SetToolTip(this.newMixedCypherButton, "Zdefiniuj własny szyfr poligramowy, lub uzupełnij go losowymi ciągami znaków\r\n");
             this.newMixedCypherButton.UseVisualStyleBackColor = true;
-            this.newMixedCypherButton.Click += new System.EventHandler(this.newMixedCypherButton_Click);
+            this.newMixedCypherButton.Click += new System.EventHandler(this.newPolygraphicCypherButton_Click);
             // 
             // saveFileDialog1
             // 
@@ -340,6 +341,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1115, 436);
             this.Controls.Add(this.splitContainer1);
+            this.MaximumSize = new System.Drawing.Size(1133, 483);
+            this.MinimumSize = new System.Drawing.Size(1133, 483);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Szyfrowanie";
