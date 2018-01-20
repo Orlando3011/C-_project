@@ -16,29 +16,22 @@ namespace Szyfrowanie
             this.key = key;
         }
 
-        private char EncryptLetter(char ch)
+        char EncryptLetter(char ch)
         {
             if (!char.IsLetter(ch))
             {
                 return ch;
             }
-            else { }
+            else
             {
                 char d = char.IsUpper(ch) ? 'A' : 'a';
-                if (this.key >= 0)
+                if (((ch + this.key) - d) < 0)
                 {
-                    return (char)((((ch + this.key) - d) % 26) + d);
+                    return (char)((((ch + this.key) - d) % 26) + d + 26);
                 }
                 else
                 {
-                    if (((ch + this.key) - d) < 0)
-                    {
-                        return (char)((((ch + this.key) - d) % 26) + d + 26);
-                    }
-                    else
-                    {
-                        return (char)((((ch + this.key) - d) % 26) + d);
-                    }
+                    return (char)((((ch + this.key) - d) % 26) + d);
                 }
             }
         }

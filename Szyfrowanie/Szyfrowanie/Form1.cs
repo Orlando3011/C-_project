@@ -19,7 +19,6 @@ namespace Szyfrowanie
         }
 
         public List<char> substitutionCypherKey = new List<char>();
-
         Text loadedText = new Text();
 
         public static String ShowCharListContent(List<char> list)
@@ -59,8 +58,8 @@ namespace Szyfrowanie
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 loadedText.filePath = openFileDialog1.FileName;
-                loadedText.text = loadedText.readTextFile();
-                loadedText.fileName = loadedText.setFileName();
+                loadedText.readTextFile();
+                loadedText.setFileName();
                 fileNameBox.Text = loadedText.fileName;
                 originalTextBox.Text = loadedText.text;
             }
@@ -68,27 +67,27 @@ namespace Szyfrowanie
 
         private void caesarCypherButton(object sender, EventArgs e)
         {
-                CaesarCypher cCypher = new CaesarCypher(loadedText.text, Convert.ToInt32(numericUpDown1.Value));
-                substitutionCypherKey.Clear();
-                substitutionCypherKey.AddRange(cCypher.CreateKeyList());
-                loadedText.encryptedText = cCypher.CaesarEncypher();
-                encryptedTextBox.Text = loadedText.encryptedText;
-                keyTextBox.Text = ShowCharListContent(substitutionCypherKey);
+            substitutionCypherKey.Clear();
+            CaesarCypher cCypher = new CaesarCypher(loadedText.text, Convert.ToInt32(numericUpDown1.Value));
+            substitutionCypherKey.AddRange(cCypher.CreateKeyList());
+            loadedText.encryptedText = cCypher.CaesarEncypher();
+            encryptedTextBox.Text = loadedText.encryptedText;
+            keyTextBox.Text = ShowCharListContent(substitutionCypherKey);
         }
 
         private void newSubstitutionCypherButton_Click(object sender, EventArgs e)
         {
-                substitutionCypherKey.Clear();
-                substitutionCipherForm form2 = new substitutionCipherForm();
-                form2.Show();
-                form2.Closed += (sender1, args) =>
-                {
-                    this.substitutionCypherKey.AddRange(form2.cypherList);
-                    SubstitutionCypher sCypher = new SubstitutionCypher(loadedText.text, substitutionCypherKey);
-                    loadedText.encryptedText = sCypher.SubstitutionEncypher();
-                    encryptedTextBox.Text = loadedText.encryptedText;
-                    keyTextBox.Text = ShowCharListContent(substitutionCypherKey);
-                };
+            substitutionCypherKey.Clear();
+            substitutionCipherForm form2 = new substitutionCipherForm();
+            form2.Show();
+            form2.Closed += (sender1, args) =>
+            {
+                this.substitutionCypherKey.AddRange(form2.cypherList);
+                SubstitutionCypher sCypher = new SubstitutionCypher(loadedText.text, substitutionCypherKey);
+                loadedText.encryptedText = sCypher.SubstitutionEncypher();
+                encryptedTextBox.Text = loadedText.encryptedText;
+                keyTextBox.Text = ShowCharListContent(substitutionCypherKey);
+            };
         }
 
         private void saveWithoutCypherButton_Click(object sender, EventArgs e)

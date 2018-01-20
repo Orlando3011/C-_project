@@ -23,10 +23,8 @@ namespace Szyfrowanie
 
             if (charASCII >= 65 && charASCII <= 90)
                 return this.cypherKey[charASCII - 39];
-
             else if (charASCII >= 97 && charASCII <= 122)
                 return this.cypherKey[charASCII - 97];
-
             else
                 return ch;
         }

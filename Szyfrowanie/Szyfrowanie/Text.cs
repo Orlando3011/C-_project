@@ -15,14 +15,13 @@ namespace Szyfrowanie
         public String fileName;
         public String filePath;
 
-        public String setFileName()
+        public void setFileName()
         {
             int lastSplash = this.filePath.LastIndexOf("\\");
             this.fileName = this.filePath.Substring(lastSplash + 1, this.filePath.Length - lastSplash - 1);
-            return this.fileName;
         }
 
-        public string readTextFile()
+        public void readTextFile()
         {
             List<string> textArray = new List<string>();
             try
@@ -37,12 +36,10 @@ namespace Szyfrowanie
                     }
                 }
                 this.text = string.Join("", textArray);
-                return this.text;
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Błąd odczytu pliku: " + this.filePath + " " + ex.Message);
-                return null;
             }
         }
 

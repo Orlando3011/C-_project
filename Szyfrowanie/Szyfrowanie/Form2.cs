@@ -62,12 +62,13 @@ namespace Szyfrowanie
                 {
                     if (!this.cypherList.Contains(Controls["signTextBox" + i.ToString()].Text[0]))
                         this.cypherList.Add(Controls["signTextBox" + i.ToString()].Text[0]);
-                    else errorCounter++;
+                    else
+                        errorCounter++;
                 }
                 if (errorCounter == 0)
                     this.Close();
                 else
-                    MessageBox.Show("Znaki szyfrujące powtarzają się. Każda litera musi być zaszyfrowana inikalnym znakiem.");
+                    MessageBox.Show("Znaki szyfrujące powtarzają się. Każda litera musi być zaszyfrowana unikalnym znakiem.");
             }
             catch(Exception ex)
             {
