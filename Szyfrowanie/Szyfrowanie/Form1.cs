@@ -19,7 +19,6 @@ namespace Szyfrowanie
         }
 
         public List<char> substitutionCypherKey = new List<char>();
-        public List<String> mixedCypherKey = new List<String>();
 
         Text loadedText = new Text();
 
@@ -46,33 +45,6 @@ namespace Szyfrowanie
             }
             catch (Exception ex)
             {
-                return null;
-            }
-        }
-
-        public static String ShowStringListContent(List<String> list)
-        {
-            try
-            {
-                string output = "";
-                output = output + "----------------\r\nMałe litery:\r\n----------------\r\n";
-
-                for (char i = 'a'; i <= 'z'; i++)
-                {
-                    output = output + i + " -> " + list[i - 'a'] + "\r\n";
-                }
-
-                output = output + "\r\n----------------\r\nDuże litery:\r\n----------------\r\n\r\n";
-
-                for (char i = 'A'; i <= 'Z'; i++)
-                {
-                    output = output + i + " -> " + list[i - 'A' + 26] + "\r\n";
-                }
-                return output;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Błąd: " + ex.Message);
                 return null;
             }
         }
