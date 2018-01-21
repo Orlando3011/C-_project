@@ -82,11 +82,17 @@ namespace Szyfrowanie
             form2.Show();
             form2.Closed += (sender1, args) =>
             {
-                this.substitutionCypherKey.AddRange(form2.cypherList);
-                SubstitutionCypher sCypher = new SubstitutionCypher(loadedText.text, substitutionCypherKey);
-                loadedText.encryptedText = sCypher.SubstitutionEncypher();
-                encryptedTextBox.Text = loadedText.encryptedText;
-                keyTextBox.Text = ShowCharListContent(substitutionCypherKey);
+                try
+                {
+                    this.substitutionCypherKey.AddRange(form2.cypherList);
+                    SubstitutionCypher sCypher = new SubstitutionCypher(loadedText.text, substitutionCypherKey);
+                    loadedText.encryptedText = sCypher.SubstitutionEncypher();
+                    encryptedTextBox.Text = loadedText.encryptedText;
+                    keyTextBox.Text = ShowCharListContent(substitutionCypherKey);
+                }
+                catch(Exception ex)
+                {
+                }
             };
         }
 

@@ -39,7 +39,6 @@ namespace Szyfrowanie
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Błąd: nie wybrano pliku, lub plik jest nieprawidłowy.");
                 return null;
             }
         }

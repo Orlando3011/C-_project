@@ -46,10 +46,8 @@ namespace Szyfrowanie
 
             for (int i = 0; i < 52; i++)
             {
-                if (Controls["signTextBox" + (i+1).ToString()].Text.Length == 0)
-                {
-                    Controls["signTextBox" + (i+1).ToString()].Text = chars[randomList[i]].ToString();
-                }
+                char randomChar = chars[randomList[i]];
+                Controls["signTextBox" + (i + 1).ToString()].Text = randomChar.ToString();
             }
         }
 
@@ -67,8 +65,12 @@ namespace Szyfrowanie
                 }
                 if (errorCounter == 0)
                     this.Close();
+
                 else
+                {
+                    this.cypherList.Clear();
                     MessageBox.Show("Znaki szyfrujące powtarzają się. Każda litera musi być zaszyfrowana unikalnym znakiem.");
+                }
             }
             catch(Exception ex)
             {
