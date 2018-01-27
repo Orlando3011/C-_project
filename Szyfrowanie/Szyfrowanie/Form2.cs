@@ -74,6 +74,7 @@ namespace Szyfrowanie
             }
             catch(Exception ex)
             {
+                this.cypherList.Clear();
                 MessageBox.Show("Uzupełnij wszystkie pola unikalnymi znakami, lub użyj opcji losowania.");
             }
         }

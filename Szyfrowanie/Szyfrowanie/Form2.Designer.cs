@@ -1185,7 +1185,7 @@
             this.MinimumSize = new System.Drawing.Size(550, 550);
             this.Name = "substitutionCipherForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Ustaw szyfr";
+            this.Text = " ";
             this.ResumeLayout(false);
             this.PerformLayout();
 

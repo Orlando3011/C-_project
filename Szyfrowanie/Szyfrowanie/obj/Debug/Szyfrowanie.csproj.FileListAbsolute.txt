@@ -31,3 +31,15 @@ C:\Users\User\Desktop\IT\C-_project\Szyfrowanie\Szyfrowanie\obj\Debug\Szyfrowani
 C:\Users\User\Desktop\IT\C-_project\Szyfrowanie\Szyfrowanie\obj\Debug\Szyfrowanie.csproj.CoreCompileInputs.cache
 C:\Users\User\Desktop\IT\C-_project\Szyfrowanie\Szyfrowanie\obj\Debug\Szyfrowanie.exe
 C:\Users\User\Desktop\IT\C-_project\Szyfrowanie\Szyfrowanie\obj\Debug\Szyfrowanie.pdb
+C:\Users\User\Desktop\IT\JiT projekt\Szyfrowanie\Szyfrowanie\obj\Debug\Szyfrowanie.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\IT\JiT projekt\Szyfrowanie\Szyfrowanie\obj\Debug\Szyfrowanie.Form1.resources
+C:\Users\User\Desktop\IT\JiT projekt\Szyfrowanie\Szyfrowanie\obj\Debug\Szyfrowanie.substitutionCipherForm.resources
+C:\Users\User\Desktop\IT\JiT projekt\Szyfrowanie\Szyfrowanie\obj\Debug\Szyfrowanie.Properties.Resources.resources
+C:\Users\User\Desktop\IT\JiT projekt\Szyfrowanie\Szyfrowanie\obj\Debug\Szyfrowanie.csproj.GenerateResource.Cache
+C:\Users\User\Desktop\IT\JiT projekt\Szyfrowanie\Szyfrowanie\obj\Debug\Szyfrowanie.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\IT\JiT projekt\Szyfrowanie\Szyfrowanie\obj\Debug\Szyfrowanie.exe
+C:\Users\User\Desktop\IT\JiT projekt\Szyfrowanie\Szyfrowanie\obj\Debug\Szyfrowanie.pdb
+C:\Users\User\Desktop\IT\JiT projekt\Szyfrowanie\Szyfrowanie\bin\Debug\Szyfrowanie.exe.config
+C:\Users\User\Desktop\IT\JiT projekt\Szyfrowanie\Szyfrowanie\bin\Debug\Szyfrowanie.exe
+C:\Users\User\Desktop\IT\JiT projekt\Szyfrowanie\Szyfrowanie\bin\Debug\Szyfrowanie.pdb
+C:\Users\User\Desktop\IT\JiT projekt\Szyfrowanie\Szyfrowanie\obj\Debug\Szyfrowanie.AdvancedCypherForm.resources

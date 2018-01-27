@@ -36,6 +36,8 @@
             this.chooseFileButton = new System.Windows.Forms.Button();
             this.saveWithoutCypherButton = new System.Windows.Forms.Button();
             this.saveWithCypherButton = new System.Windows.Forms.Button();
+            this.loadCypherButton = new System.Windows.Forms.Button();
+            this.decypherButton = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
@@ -49,6 +51,8 @@
             this.quitButton = new System.Windows.Forms.Button();
             this.fileNameBox = new System.Windows.Forms.TextBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
@@ -72,7 +76,7 @@
             // 
             // caesaeButton
             // 
-            this.caesaeButton.Location = new System.Drawing.Point(12, 98);
+            this.caesaeButton.Location = new System.Drawing.Point(12, 84);
             this.caesaeButton.Name = "caesaeButton";
             this.caesaeButton.Size = new System.Drawing.Size(148, 52);
             this.caesaeButton.TabIndex = 7;
@@ -84,7 +88,7 @@
             // 
             // newSubstitutionCypherButton
             // 
-            this.newSubstitutionCypherButton.Location = new System.Drawing.Point(12, 156);
+            this.newSubstitutionCypherButton.Location = new System.Drawing.Point(12, 141);
             this.newSubstitutionCypherButton.Name = "newSubstitutionCypherButton";
             this.newSubstitutionCypherButton.Size = new System.Drawing.Size(148, 52);
             this.newSubstitutionCypherButton.TabIndex = 10;
@@ -96,7 +100,7 @@
             // 
             // chooseFileButton
             // 
-            this.chooseFileButton.Location = new System.Drawing.Point(12, 12);
+            this.chooseFileButton.Location = new System.Drawing.Point(12, 3);
             this.chooseFileButton.Name = "chooseFileButton";
             this.chooseFileButton.Size = new System.Drawing.Size(148, 52);
             this.chooseFileButton.TabIndex = 0;
@@ -122,10 +126,33 @@
             this.saveWithCypherButton.Name = "saveWithCypherButton";
             this.saveWithCypherButton.Size = new System.Drawing.Size(148, 52);
             this.saveWithCypherButton.TabIndex = 12;
-            this.saveWithCypherButton.Text = "Zapisz plik z szyfrem...";
-            this.toolTip1.SetToolTip(this.saveWithCypherButton, "Zapisz zaszyfrowany dokument, razem z szyfrem, w którym go zakodowano");
+            this.saveWithCypherButton.Text = "Zapisz klucz...";
+            this.toolTip1.SetToolTip(this.saveWithCypherButton, "Zapisz klucz, widoczny w oknie po prawej.\r\nPóźniej mozna go użyć do zaszyfrowania" +
+        " innego pliku, lub do odkodowania go.");
             this.saveWithCypherButton.UseVisualStyleBackColor = true;
             this.saveWithCypherButton.Click += new System.EventHandler(this.saveWithCypherButton_Click);
+            // 
+            // loadCypherButton
+            // 
+            this.loadCypherButton.Location = new System.Drawing.Point(12, 258);
+            this.loadCypherButton.Name = "loadCypherButton";
+            this.loadCypherButton.Size = new System.Drawing.Size(148, 52);
+            this.loadCypherButton.TabIndex = 15;
+            this.loadCypherButton.Text = "Wczytaj gotowy szyfr...";
+            this.toolTip1.SetToolTip(this.loadCypherButton, "Wczytaj plik z kluczem przygotowanym wczesniej w programie. \r\n");
+            this.loadCypherButton.UseVisualStyleBackColor = true;
+            this.loadCypherButton.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // decypherButton
+            // 
+            this.decypherButton.Location = new System.Drawing.Point(166, 258);
+            this.decypherButton.Name = "decypherButton";
+            this.decypherButton.Size = new System.Drawing.Size(148, 51);
+            this.decypherButton.TabIndex = 16;
+            this.decypherButton.Text = "Odszyfruj";
+            this.toolTip1.SetToolTip(this.decypherButton, "Użyj klucza z pola \"Klucz\" do odszyfrowania tekstu z pola \"Wczytany tekst\"");
+            this.decypherButton.UseVisualStyleBackColor = true;
+            this.decypherButton.Click += new System.EventHandler(this.decypherButton_Click);
             // 
             // saveFileDialog1
             // 
@@ -179,7 +206,7 @@
             this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(425, 22);
             this.textBox4.TabIndex = 5;
-            this.textBox4.Text = "Orginalny tekst";
+            this.textBox4.Text = "Wczytany tekst";
             this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // originalTextBox
@@ -203,7 +230,7 @@
             this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(425, 22);
             this.textBox5.TabIndex = 6;
-            this.textBox5.Text = "Zaszyfrowany tekst";
+            this.textBox5.Text = "Zmodyfikowany tekst";
             this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // encryptedTextBox
@@ -241,7 +268,7 @@
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(229, 114);
+            this.numericUpDown1.Location = new System.Drawing.Point(166, 100);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             25,
             0,
@@ -268,7 +295,7 @@
             // 
             // fileNameBox
             // 
-            this.fileNameBox.Location = new System.Drawing.Point(12, 70);
+            this.fileNameBox.Location = new System.Drawing.Point(12, 56);
             this.fileNameBox.Name = "fileNameBox";
             this.fileNameBox.ReadOnly = true;
             this.fileNameBox.Size = new System.Drawing.Size(148, 22);
@@ -283,6 +310,10 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.textBox3);
+            this.splitContainer1.Panel1.Controls.Add(this.button1);
+            this.splitContainer1.Panel1.Controls.Add(this.decypherButton);
+            this.splitContainer1.Panel1.Controls.Add(this.loadCypherButton);
             this.splitContainer1.Panel1.Controls.Add(this.textBox2);
             this.splitContainer1.Panel1.Controls.Add(this.saveWithCypherButton);
             this.splitContainer1.Panel1.Controls.Add(this.saveWithoutCypherButton);
@@ -300,9 +331,29 @@
             this.splitContainer1.SplitterDistance = 396;
             this.splitContainer1.TabIndex = 11;
             // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(166, 198);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(204, 52);
+            this.textBox3.TabIndex = 18;
+            this.textBox3.Text = "Zastąp każdą literę tekstu na jeden z losowych numerów";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(12, 199);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(148, 51);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "Zaawansowany szyfr podstawieniowy...";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(166, 156);
+            this.textBox2.Location = new System.Drawing.Point(166, 141);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
@@ -364,6 +415,10 @@
         private System.Windows.Forms.Button saveWithCypherButton;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button loadCypherButton;
+        private System.Windows.Forms.Button decypherButton;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button button1;
     }
 }
 
