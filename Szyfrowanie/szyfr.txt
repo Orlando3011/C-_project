@@ -1,4 +1,4 @@
-Sample of text to endrypt, just an example.
+Sample of text to encrypt, just an example.
 abcde
 ABCDE
 abcde

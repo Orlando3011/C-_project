@@ -69,7 +69,7 @@ namespace Szyfrowanie
             if (!char.IsLetter(ch)) return ch;
             else
             {
-                if (list.IndexOf(ch) > 26) return (char)(list.IndexOf(ch) + 65);
+                if (list.IndexOf(ch) > 25) return (char)(list.IndexOf(ch) + 39);
 
                 else return (char)(list.IndexOf(ch) + 97);
             }
