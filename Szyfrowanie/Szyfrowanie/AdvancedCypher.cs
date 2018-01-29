@@ -17,7 +17,7 @@ namespace Szyfrowanie
             this.cypherKey = cypherKey;
         }
 
-        private string EncryptLetter(char ch)
+        private string EncryptLetter(char ch) //zawsze losuje tą samą opcję,  po przeniesieniu tego kodu do AdvancedEncypher problem znika
         {
             Random rand = new Random();
             string possibleSigns;
@@ -48,11 +48,38 @@ namespace Szyfrowanie
         public string AdvancedEncypher()
         {
             Random rand = new Random();
-            int random;
+            string possibleSigns;
+            string chosenSigns = "";
+            int charASCII;
+            int randomNumber;
             string output = string.Empty;
+            string temp = string.Empty;
             try
             {
-                foreach (char ch in this.initialText) output += EncryptLetter(ch);
+                foreach (char ch in this.initialText)
+                {
+                    charASCII = (int)ch;
+                    if (charASCII >= 65 && charASCII <= 90)
+                    {
+                        possibleSigns = this.cypherKey[charASCII - 65];
+                        randomNumber = rand.Next(1, (possibleSigns.Length / 2));
+                        chosenSigns = "" + possibleSigns[(randomNumber * 2) - 2] + possibleSigns[(randomNumber * 2) - 1];
+                        output = output + chosenSigns;
+                    }
+
+                    else if (charASCII >= 97 && charASCII <= 122)
+                    {
+                        possibleSigns = this.cypherKey[charASCII - 97];
+                        randomNumber = rand.Next(1, (possibleSigns.Length / 2));
+                        chosenSigns = "" + possibleSigns[(randomNumber * 2) - 2] + possibleSigns[randomNumber * 2 - 1];
+                        output = output + chosenSigns;
+                    }
+
+                    else
+                        output = output + ch.ToString();
+                }
+                    
+                //output += EncryptLetter(ch);
                 return output;
             }
             catch (Exception ex)
